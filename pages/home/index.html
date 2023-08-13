@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>DASHBOARD</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style>
+      body {
+        justify-content: center;
+        align-items: center;
+      }
+    </style>
+    <!-- -******************************************** -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
+      crossorigin="anonymous"
+    />
+    <!-- -******************************************** -->
+    <script src="script.js" defer></script>
+  </head>
+
+  <body class="bg-dark-subtle overflow-hidden">
+    <header class="">
+      <div class="bg-light">
+        <div class="d-flex justify-content-between align-items-center">
+          <div class="p-2">
+            <h4 class="text-capitalize" >Welcome, <b class="" id="user_name">User-Name</b></h4>
+          </div>
+          <div class="p-2">
+            <button type="button" class="btn btn-danger p-2" id="logout_btn">
+              Log out
+            </button>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <div class="container p-4 min-vw-100 px-4">
+      <div class="row gx-5">
+        <div class="col-7 min-vh-100 container">
+          <h1 class="">ToDo Task list</h1>
+          <ul id="task_list" class="list-group"></ul>
+        </div>
+
+        <div class="col-4 container">
+          <h1>Task form...</h1>
+          <form id="form_add_task" enctype="multipart/form-data">
+            <div class="input-group mb-3">
+              <input
+                type="text"
+                class="form-control"
+                name="info"
+                placeholder="Enter task."
+              />
+            </div>
+            <div class="input-group mb-3">
+              <input
+                type="file"
+                accept="image/*"
+                class="form-control"
+                name="image"
+              />
+            </div>
+            <div class="input-group mb-3">
+              <input type="submit" class="btn btn-primary" value="ADD TASK" />
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <!-- -******************************************** -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+      crossorigin="anonymous"
+    ></script>
+    <!-- -******************************************** -->
+  </body>
+</html>
