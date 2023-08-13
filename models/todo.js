@@ -68,7 +68,8 @@ class Todo {
     const id = Todo.getTodoId();
     try {
       const { id: taskId, info, completed, imagePath } = task;
-      await todoStore.saveTaskToList(id, info, imagePath, completed, taskId);
+      const fetchedId = await todoStore.saveTaskToList(id, info, imagePath, completed, taskId);
+      task.id = fetchedId;
     } catch (err) {
       console.log("failed to save todolist");
     }

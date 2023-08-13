@@ -1,5 +1,4 @@
 const { createTodoList } = require("./todo.js");
-const uuid = require("uuid").v4;
 
 const User = { collection: null };
 
@@ -16,9 +15,10 @@ User.getUser = getUser;
 
 async function saveUser(id, name, password) {
   try {
-    const user = { id, name, password, todoId: uuid() };
+    const user = { id, name, password };
 
-    await createTodoList(user.todoId);
+    const todoId =  await createTodoList();
+    user.todoId = todoId;
     await User.collection.insertOne(user);
 
     return true;

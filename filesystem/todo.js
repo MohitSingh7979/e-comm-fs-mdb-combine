@@ -51,6 +51,7 @@ async function saveTaskToList(id, info, imagePath, completed, taskId) {
   const task = { info, id: taskId || uuid(), completed, imagePath };
   todolist[task.id] = task;
   await saveTodoList(id, todolist);
+  return task.id;
 }
 
 async function removeTaskFromList(id, taskId){

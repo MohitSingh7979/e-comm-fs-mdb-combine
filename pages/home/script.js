@@ -22,6 +22,7 @@ fetch("/todo")
 logoutBtn.addEventListener("click", () => {
   fetch("/user", { method: "DELETE" })
     .then(() => {
+      location.href = "/";
     })
     .catch(console.error);
 });
@@ -34,7 +35,6 @@ formAddTask.addEventListener("submit", (eve) => {
     .then((data) => {
       showTask(data.task);
       formAddTask.reset();
-      location.href = "/";
     }).catch(console.error);
 });
 
